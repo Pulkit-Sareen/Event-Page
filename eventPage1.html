@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Squid Game</title>
+    <link rel="stylesheet" href="eventPage.css">
 </head>
+
 <body>
-    
+    <nav id="nav">
+        <div class="logo">
+            <img src="istelogo.png" alt="Iste Logo">
+        </div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">Sponsers</a>
+                </li>
+                <li>
+                    <a href="#">Team</a>
+                </li>
+            </ul>
+        </div>
+        <button id="nav-button">Register</button>
+    </nav>
+
+    <header>
+        <img src="Squid-Game.webp" alt="">
+    </header>
+    <section class="info">
+        <img src="sq_with_more_visible_grey_lines.png" alt="">
+        <div class="content">
+            <div class="info-content-navbar">
+                <div class="about">
+                    <h3>About Event</h3>
+                </div>
+                <div class="rules">
+                    <h3>Role Book</h3>
+                </div>
+                <div class="poc">
+                    <h3>POC</h3>
+                </div>
+                <div class="prizes">
+                    <h3>Prizes</h3>
+                </div>
+            </div>
+            <div class="info-content">
+                <div class="about-content">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique ullam quasi earum sed, labore
+                        corrupti autem! Laudantium impedit deserunt ducimus, laboriosam nam iusto illo.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam eum cumque, doloremque rerum
+                        odit animi maxime culpa id, esse blanditiis maiores repellat quidem. Aut, eligendi! Quasi qui
+                        unde aliquid, omnis porro nostrum!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+<script>
+    const nav = document.getElementById("nav");
+    const navButton = document.getElementById("nav-button");
+
+    function handleScroll() {
+        const windowHeight = window.innerHeight * 0.4;
+
+        if (window.scrollY > windowHeight) {
+            nav.style.backgroundColor = "#E50914";
+            navButton.style.backgroundColor = "black";
+            navButton.style.color = "white";
+        } else {
+            nav.style.backgroundColor = "transparent";
+            navButton.style.backgroundColor = "#E50914";
+            navButton.style.color = "black";
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+</script>
+
+
 </html>
